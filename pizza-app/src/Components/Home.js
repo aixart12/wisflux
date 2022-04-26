@@ -2,18 +2,11 @@ import React from 'react';
 import { useState } from 'react';
 
 export default function Home(props) { 
-    // const [ title , setTitle] = useState("");
-    // const [ cost , setCost] = useState("");
-
-    // const addItem = (e) =>{
-    //     e.preventDefault();
-    //     props.addtoCart(title , cost);
-    // }
-
 
     let homeStyle = {
-        height: "75vh",
+        maxHeight: "fit-content",
         margin: "10px auto"
+        
     }
 
   return (
@@ -27,10 +20,10 @@ export default function Home(props) {
                 return (
                 <div className="col">
                 <div className="card h-100">
-                <img src={option.image} className="card-img-top" alt="..."/>
+                <img src={`http://localhost:8080/${option.image}`} className="card-img-top" alt="..."/>
                 <div className="card-body">
                     <h5 className="card-title"  >{option.title}</h5>
-                    <p className="card-text">Cost <span className='cost'  >{option.price}</span> ruppe</p>
+                    <p className="card-text">Cost : $ <span className='cost'  >{option.price}</span></p>
                     <button className="btn btn-sm btn-success" onClick={()=>{props.onAdd(option)}}>Add</button> 
                 </div>
                 </div>
