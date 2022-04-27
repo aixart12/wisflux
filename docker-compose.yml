@@ -2,30 +2,32 @@ version: '3.8'
 
 services:
   postgres:
-    image: 'postgres:alpine'
+    image: postgres
     ports: 
-      - '5425:5432'
+      - 5432:5432
     environment:
        POSTGRES_PASSWORD: postgres
        POSTGRES_USER: postgres
        POSTGRES_DB: pizzastore
+    volumes:
+      - db-data:/var/lib/postgresql/data
   server:
     build: ./backend 
-    volumes:
-      - /app/node_modules
-      - ./backend/:/app
     ports:
-      - '8080:8080'
+      - 8080:8080
+    depends_on:
+      - postgres
   app:
+    depends_on:
+      - server
     build: ./pizza-app 
-    volumes:
-      - /app/node_modules
-      - ./pizza-app/:/app
     ports:
-      - '3000:3000'
+      - 3000:3000
     image: pizza:store
     container_name: react_container
     command: npm start
+volumes:
+  db-data:  
 
   
 
