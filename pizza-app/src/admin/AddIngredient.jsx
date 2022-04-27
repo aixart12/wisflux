@@ -8,10 +8,8 @@ const ShowIngredient = () =>{
   useEffect(()=>{
     const getIngredientData = async ()=>{
       const { data } = await axios.get('/api/getAllIngredient')
-      console.log(data);
-      if(data.length == 0){
-        console.log("Connected");
-      }
+      console.log(data)
+      setIngredient(data)
     }
     getIngredientData()
   },[])

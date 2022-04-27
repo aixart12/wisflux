@@ -1,4 +1,4 @@
-import React , {useState , useEffect} from 'react';
+
 import { Link } from 'react-router-dom';
 
 
@@ -39,6 +39,7 @@ export default function Cart(props) {
                 } 
         </tbody>
         </table>
+        <div></div>
         {props.cartItem.length===0?<button className='btn btn-secondary' >No item in Cart</button>:
             <Link className='btn btn-success' onClick={()=>{props.onPurchase()}} to='/login' >Purchase</Link>}
     </div>

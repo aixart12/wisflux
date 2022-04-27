@@ -28,7 +28,7 @@ function Login() {
       console.log("Already a player");
       <div>You Rock it</div>
       navigate("/")
-    }else if(password != null && Number(password) != Number(formValues.password) ){ 
+    }else if(password !== null && Number(password) !== Number(formValues.password) ){ 
       console.log("ReEnter password")
     }else {
       // e.preventDefault()
