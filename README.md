@@ -1,10 +1,10 @@
-# wisflux
+# <h1>WisFlux</h1>
 <h1>The is repository for my assigment which to make a pizza website for WISFLUX .</h1>
 <h2>This app contain</h2>
 <div>
 <ul>
 <li>This app contain backend folder for connections with <strong>POSTGRESQL</strong></li>
-    <h4><b>API's</b> at http://locahost:8080/api</h4>
+    <h4><b>API's</b> at http://locahost:8080/api are</h4>
     <ul>
         <li>/addIngredient</li>
         <li>/getAllIngredient</li>
@@ -18,10 +18,8 @@
         <li>/addOrderItem</li>
         <li>/getUser/:email</li>
         <li>/getAllUser</li>
-
-
     </ul>
-<li>The bacend folder contains <b>API</b>and <b>SEQUELIZE SCHEMA</b></li>
+<li>The backend folder contains <b>API</b>and <b>SEQUELIZE SCHEMA</b></li>
 <hr>
 <li>The </b> pizza-app </b> folde conatains <b>REACT APP</b></li>
     <ul>
