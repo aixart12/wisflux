@@ -4,13 +4,9 @@ module.exports = function(app) {
   app.use(
     '/api',
     createProxyMiddleware({
-      target: 'http://localhost:8080',
+      target: 'http://172.18.0.3:8080/',
       secure: false,
-      changeOrigin: true,
-      headers: {
-        Connection: 'keep-alive'
-    }
-      
+      changeOrigin: true    
     })
   );
 };

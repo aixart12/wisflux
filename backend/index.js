@@ -25,7 +25,7 @@ db.sequelize.sync();
 app.use('/Images', express.static('./Images'))
 
 app.get("/", (req, res) => {
-  res.json({ message: "Welcome to bezkoder application." });
+  res.json({ message: "Welcome to pizza  application." });
 });
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;

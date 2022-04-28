@@ -19,7 +19,7 @@ export default function Home(props) {
                 return (
                 <div className="col">
                 <div className="card h-100">
-                <img src={`http://localhost:8080/${option.image}`} className="card-img-top" alt="..."/>
+                <img src={`http://172.18.0.3:8080/${option.image}`} className="card-img-top" alt="..."/>
                 <div className="card-body">
                     <h5 className="card-title"  >{option.title}</h5>
                     <p className="card-text">Cost : $ <span className='cost'  >{option.price}</span></p>

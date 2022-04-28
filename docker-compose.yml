@@ -24,6 +24,7 @@ services:
     ports:
       - 3000:3000
     image: pizza:store
+    stdin_open: true
     container_name: react_container
     command: npm start
 volumes:
